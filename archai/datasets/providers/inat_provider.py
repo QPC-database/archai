@@ -1,8 +1,20 @@
 # Code adapted from https://github.com/macaodha/inat_comp_2018/blob/master/inat2018_loader.py
 
+''' INaturalist 2019 data loader provider. This assumes that the user has downloaded 
+the data from Kaggle: https://www.kaggle.com/c/inaturalist-2019-fgvc6/data and unzipped
+the data such that the following folder structure exists 
+dataroot->inaturalist-2019-fgvc6 which should contain train_val2019 and test2019 folders, along with
+train2019.json, val2019.json, test2019.json 
+
+TODO: Provide an installer script in archai/scrips/datasets similar to other datasets.
+'''
+
+
 from typing import List, Tuple, Union, Optional
 import os
 import json
+import numpy as np
+from PIL import Image
 
 from overrides import overrides, EnforceOverrides
 from torch.utils.data.dataset import Dataset
