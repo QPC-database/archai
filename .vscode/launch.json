@@ -86,6 +86,14 @@
             "args": ["--full", "--algos", "petridish"]
         },
         {
+            "name": "Petridish-Eval-ImageNet",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/scripts/main.py",
+            "console": "integratedTerminal",
+            "args": ["--full", "--algos", "petridish", "--datasets", "imagenet", "--dataset_eval.dataroot", "D://", "--no-search", "--nas.eval.final_desc_foldername", "models/petridish/pt_sweep_seed_36_epochs_600_scale_2.0/model_desc_gallery"]
+        },
+        {
             "name": "Petridish-Toy",
             "type": "python",
             "request": "launch",
